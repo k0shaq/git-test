@@ -1,11 +1,26 @@
 #include <iostream>
-using namespace std;
+#include <set>
+
+template<typename T>
+void showSet(const std::set<T>& abc);
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    int a, b;
-    cin >> a >> b;
-    cout << a + b - b;
-    int g;
+	std::set<int> mySet = { 1,3,4};
+	showSet(mySet);
+	std::cout << std::endl;
+	auto it = mySet.find(3);
+	mySet.erase(it);
+	mySet.insert(2);
+	showSet(mySet);
+	std::cout << std::endl;
+	std::cout << mySet.size();
+}
+
+template<typename T>
+void showSet(const std::set<T>& abc) {
+	for (auto it = abc.begin(); it != abc.end(); ++it)
+	{
+		std::cout << *it;
+	}
 }
