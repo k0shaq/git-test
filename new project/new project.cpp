@@ -1,15 +1,13 @@
-#include <iostream>
-#include <iterator>
-#include <list>
+#include <algorithm>
 #include <vector>
+#include <iostream>
 
 int main() {
-    std::vector<int> nums = { 1, 2, 3, 4, 5, 6 };
-    std::vector<int>::iterator itr;
-    for (itr = nums.begin(); itr != nums.end(); ++itr) {
-        std::cout << *itr << " ";
+    std::vector<int> nums = { 10, 9, 8, 7, 6, 5 };
+    std::sort(nums.begin(), nums.end());
+
+    for (int num : nums) {
+        std::cout << num << ' ';
     }
-    for (itr -= 1; itr != nums.begin() - 1; --itr) {
-        std::cout << *itr << " ";
-    }
+    // Output: 5 6 7 8 9 10
 }
