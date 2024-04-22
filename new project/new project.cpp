@@ -1,11 +1,14 @@
 #include <iostream>
 #include <iterator>
-#include <vector>
+#include <list>
 
 int main() {
-    std::vector<int> nums = { 1, 2, 3, 4, 5 };
-    std::ostream_iterator<int> output(std::cout, " ");
-    std::copy(nums.begin(), nums.end(), output);
-
-    return 0;
+    std::list<int> nums = { 1, 2, 3, 4 };
+    std::list<int>::iterator itr;
+    for (itr = nums.begin(); itr != nums.end(); ++itr) {
+        std::cout << *itr << " ";
+    }
+    for (--itr; itr != nums.begin(); --itr) {
+        std::cout << *itr << " ";
+    }
 }
