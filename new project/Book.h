@@ -29,5 +29,6 @@ public:
 	std::string getName_book();
 	std::string getAuthor_book();
 	int getYear_book();
+	bool operator==(const Book& other) const;
 };
 

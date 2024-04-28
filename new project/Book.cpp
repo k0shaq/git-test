@@ -24,3 +24,8 @@ std::string Book::getAuthor_book() {
 int Book::getYear_book() {
 	return yearOfCreate;
 }
+bool Book::operator==(const Book& other) const {
+	if (authorBook == other.authorBook && nameBook == other.nameBook && yearOfCreate == other.yearOfCreate)
+	return true;
+	else { return false; }
+}
