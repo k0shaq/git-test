@@ -18,12 +18,12 @@
     <ClCompile Include="new project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NClass.cpp">
+    <ClCompile Include="Book.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NClass.h">
+    <ClInclude Include="Book.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
